@@ -1,0 +1,348 @@
+/* =============================================================
+   GENERAL STYLES
+ ============================================================ */
+
+body {
+    font-family: 'Inter', 'Open Sans', sans-serif;
+    line-height: 1.6;
+    color: #2c3e50;
+    background-color: #f8f9fa;
+}
+.set-radius-zero {
+    border-radius:0px;
+    -moz-border-radius:0px;
+    -webkit-border-radius:0px;
+}
+.content-wrapper {
+    margin-top: 40px;
+    min-height:800px;
+    padding-bottom:90px;
+}
+.header-line {
+    font-weight: 700;
+    padding-bottom: 25px;
+    border-bottom: 3px solid #667eea;
+    text-transform: uppercase;
+    color: #2c3e50;
+    font-size: 24px;
+    letter-spacing: 1px;
+    position: relative;
+}
+.header-line::after {
+    content: '';
+    position: absolute;
+    bottom: -3px;
+    left: 0;
+    width: 60px;
+    height: 3px;
+    background: linear-gradient(135deg, #667eea, #764ba2);
+}
+.pad-botm {
+    padding-bottom:30px;
+}
+
+
+/* =============================================================
+   NAVBAR & MENU STYLES
+ ============================================================ */
+
+.right-div {
+    float: right; 
+    padding: 20px;
+}
+#menu-top a {
+    color:#000;
+    text-decoration:none;
+    font-weight:500;
+    padding: 25px 15px 25px 15px;
+    text-transform:uppercase;
+
+}
+.menu-section {
+    background-color: #f7f7f7;
+    border-bottom:5px solid #5AA8CC;
+    width:100%
+}
+.menu-top-active {
+    background-color:#eeeeee;
+}
+.navbar-inverse {
+background-color: #FFF;
+border-color: rgba(155, 153, 153, 0.23);
+
+}
+
+.navbar {
+    min-height: 90px;
+    margin-bottom: 0px;
+   
+}
+
+/* Modern Admin Navigation (align with user theme) */
+#menu-top a {
+    color:#2c3e50;
+    font-weight:600;
+    padding:16px 14px;
+    text-transform:uppercase;
+    letter-spacing:.3px;
+    transition: all .2s ease;
+}
+#menu-top > li > a:hover,
+#menu-top > li > a:focus {
+    color:#667eea;
+    background: rgba(102,126,234,0.08);
+}
+.menu-section {
+    background: #ffffff;
+    border-bottom: 1px solid #e9ecef;
+    width:100%;
+}
+.menu-top-active {
+    background: rgba(102,126,234,0.08);
+    color:#667eea !important;
+}
+.navbar-inverse {
+    background-color: #ffffff;
+    border-color: #e9ecef;
+}
+.navbar-toggle { background-color:#667eea; border-color:#667eea; }
+
+/* Dropdown menu */
+.navbar-nav > li > .dropdown-menu {
+    border-radius: 10px;
+    border: 1px solid #e9ecef;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.08);
+}
+.dropdown-menu > li > a { padding:10px 16px; }
+.dropdown-menu > li > a:hover { background:#f8f9fa; color:#667eea; }
+
+/* Modern Card and Table Scaffolding for admin pages */
+.admin-card {
+    background: #fff;
+    border-radius: 12px;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.08);
+    margin-bottom: 30px;
+    overflow: hidden;
+}
+.admin-card .card-header {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: #fff;
+    padding: 20px 25px;
+}
+.admin-card .card-body {
+    padding: 25px;
+}
+.admin-table {
+    width: 100%;
+    background: #fff;
+    border-radius: 12px;
+    overflow: hidden;
+}
+.admin-table thead th {
+    background: #f8f9fa;
+    border: none;
+    color: #495057;
+    font-weight: 600;
+    text-transform: uppercase;
+    font-size: 12px;
+    letter-spacing: 0.5px;
+    padding: 15px 20px;
+    border-bottom: 2px solid #e9ecef;
+}
+.admin-table tbody td {
+    padding: 15px 20px;
+    border-bottom: 1px solid #f1f3f4;
+}
+.navbar-inverse .navbar-collapse, .navbar-inverse .navbar-form {
+    border-color:transparent;
+}
+.navbar-toggle {
+background-color: black;
+border: 1px solid black;
+}
+
+    /* =============================================================
+   DASHBOARD STYLES
+ ============================================================ */
+
+/* Admin Dashboard Stats */
+.admin-stats {
+    margin-top: 30px;
+}
+.admin-stats .col-md-3,
+.admin-stats .col-sm-6 {
+    display: flex;
+}
+.admin-stat-card {
+    background: #fff;
+    border-radius: 12px;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.08);
+    padding: 24px;
+    margin-bottom: 24px;
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    border-left: 4px solid transparent;
+    transition: all 0.3s ease;
+    width: 100%;
+    min-height: 120px;
+}
+.admin-stat-card:hover { transform: translateY(-3px); box-shadow: 0 8px 24px rgba(0,0,0,0.12); }
+.admin-stat-icon { width: 56px; height: 56px; border-radius: 50%; display:flex; align-items:center; justify-content:center; color:#fff; font-size:22px; }
+.admin-stat-content { flex:1; }
+.admin-stat-number { font-size: 28px; font-weight: 700; margin: 0; color:#2c3e50; }
+.admin-stat-label { margin: 4px 0 0 0; font-size: 13px; color:#6c757d; text-transform: uppercase; letter-spacing: .5px; }
+.admin-stat-books { border-left-color: #3498db; }
+.admin-stat-books .admin-stat-icon { background: linear-gradient(135deg,#3498db,#2980b9); }
+.admin-stat-issued { border-left-color: #f39c12; }
+.admin-stat-issued .admin-stat-icon { background: linear-gradient(135deg,#f39c12,#e67e22); }
+.admin-stat-users { border-left-color: #27ae60; }
+.admin-stat-users .admin-stat-icon { background: linear-gradient(135deg,#27ae60,#229954); }
+.admin-stat-cats { border-left-color: #9b59b6; }
+.admin-stat-cats .admin-stat-icon { background: linear-gradient(135deg,#9b59b6,#8e44ad); }
+
+.img-comments {
+   border: 3px double #e1e1e1;
+height: 60px;
+
+}
+
+.chat-widget-main {
+    max-height:330px;
+    overflow:auto;
+}
+
+.slide-bdr {
+   border:5px solid #5AA8CC
+}
+.chat-widget-left:after {
+    top: 100%;
+    left: 10%;
+    border: solid transparent;
+    content: " ";
+    position: absolute;
+    border-top-color: #F70E62;
+    border-width: 15px;
+    margin-left: -15px;
+}
+
+.chat-widget-left {
+    width: 100%;
+    height: auto;
+    padding: 15px;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    border-radius: 5px;
+    position: relative;
+    border: 1px solid #F70E62;
+    font-size:12px;
+}
+.chat-widget-right:after {
+    top: 100%;
+    right: 10%;
+    border: solid transparent;
+    content: " ";
+    position: absolute;
+    border-top-color: #5AA8CC;
+    border-width: 15px;
+    margin-left: -15px;
+}
+
+.chat-widget-right {
+    width: 100%;
+    height: auto;
+    padding: 15px;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    border-radius: 5px;
+    position: relative;
+    border: 1px solid #5AA8CC;
+    font-size:12px;
+}
+
+.chat-widget-name-left {
+   color: #808080;
+    margin-top: 30px;
+    margin-left: 60px;
+    text-align:left;
+}
+
+    .img-left-chat {
+        border:3px double #e1e1e1;
+        float:left;
+        margin-right:30px;
+    }
+     .img-right-chat {
+        border:3px double #e1e1e1;
+        float:right;
+        margin-left:30px;
+    }
+     .chat-widget-main img-right {
+        border:3px double #e1e1e1;
+        float:left;
+    }
+.chat-widget-name-left h4 {
+    font-weight:normal;
+    font-size:11px;
+    
+}
+.chat-widget-name-left h5 {
+    font-weight:normal;
+    font-size:10px;
+}
+.chat-widget-name-right h4 {
+    font-weight:normal;
+    font-size:11px;
+}
+.chat-widget-name-right h5 {
+    font-weight:normal;
+    font-size:10px;
+}
+.chat-widget-name-right {
+    color: #808080;
+    margin-top: 40px;
+    margin-right: 60px;
+    text-align:right;
+}
+
+.recent-users-sec img {
+    max-height:80px;
+    margin:15px;
+}
+
+.back-widget-set {
+    background-color:transparent;
+}
+
+/* =============================================================
+   FOOTER SECTION STYLES
+ ============================================================ */
+.footer-section {
+    padding:25px 50px 25px 50px;
+    color:#000;
+    font-size:13px;
+      background-color: #f7f7f7;
+      text-align:right;
+       border-top:5px solid #5AA8CC;
+
+}
+
+    .footer-section a, .footer-section a:hover {
+        color:#000;
+    }
+
+
+.navbar-brand img {
+     max-height: 60px;
+     height: auto;
+     width: auto;
+ }
+ 
+ /* Menu inline logo placed inside the admin menu bar */
+ .menu-logo {
+     height: 24px;
+     width: auto;
+     vertical-align: middle;
+     margin: 18px 15px 18px 0;
+     float: left;
+ }
